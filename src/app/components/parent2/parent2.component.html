@@ -1,6 +1,6 @@
 <div class="parent-container" [class]="isBackgroundParent==true ?'bg-change-parent':'none'">
 <p class="parent-header">Parent work 2 !!!</p>
-<app-child (callParent)="alertText()" [shape]="'square'"></app-child>
+<app-child #rdNumber (callParent)="alertText()" [shape]="'square'"></app-child>
 <div class="btn-changer-color"><button (click)="clickBtnChangeBgParent()">Change Color</button></div>
 <div class="btn-random"><button (click)="clickBtnRandom()">Random Number</button></div>
 </div>

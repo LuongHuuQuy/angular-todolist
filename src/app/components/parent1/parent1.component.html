@@ -3,7 +3,7 @@
   [class]="isBackgroundParent == true ? 'bg-change-parent' : 'none'"
 >
   <p class="parent-header">Parent work 1 !!!</p>
-  <app-child #bgchild (callParent)="alertText()" [shape]="'circle'"></app-child>
+  <app-child #bgchild #rdNumber (callParent)="alertText()" [shape]="'circle'"></app-child>
   <div class="btn-changer-color">
     <button (click)="clickBtnChangeBgParent()">Change Color</button>
   </div>

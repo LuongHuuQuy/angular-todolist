@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent1',
@@ -7,7 +8,9 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class Parent1Component implements OnInit {
   @Input() text: string;
-  @ViewChild('bgchild') bgChild: ElementRef;
+  @ViewChild('bgchild') bgChildComponent: ChildComponent;
+  @ViewChild('rdNumber') randomNumber: ChildComponent;
+
   isBackgroundParent = false;
   constructor() {}
 
@@ -16,9 +19,9 @@ export class Parent1Component implements OnInit {
     alert(this.text);
   }
   clickBtnChangeBgParent() {
-    // this.isBackgroundParent = !this.isBackgroundParent;
-    console.log(this.bgChild);
-    // this.bgChild.nativeElement.clickParentChangeColor();
+    this.bgChildComponent.clickParentChangeColor();
   }
-  clickBtnRandom() {}
+  clickBtnRandom() {
+    this.randomNumber.randomNumber();
+  }
 }

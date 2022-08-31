@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import {ChildComponent} from '../child/child.component'
 
 @Component({
   selector: 'app-parent2',
@@ -7,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class Parent2Component implements OnInit {
   @Input() text: string;
+  @ViewChild('rdNumber')  randomNumber:ChildComponent
   isBackgroundParent=false;
   constructor() {}
   alertText() {
@@ -17,6 +19,6 @@ export class Parent2Component implements OnInit {
     this.isBackgroundParent = !this.isBackgroundParent;
   }
   clickBtnRandom(){
-    
+    this.randomNumber.randomNumber();
   }
 }

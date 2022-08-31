@@ -20,4 +20,7 @@ export class ChildComponent implements OnInit {
   clickParentChangeColor(){
     this.isColor = !this.isColor;
   }
+  randomNumber(){
+    this.number= Math.floor(Math.random()*100);
+  }
 }
