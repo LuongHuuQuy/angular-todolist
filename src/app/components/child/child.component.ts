@@ -9,6 +9,7 @@ export class ChildComponent implements OnInit {
   @Input() shape : string
   @Output() callParent = new EventEmitter(); 
   number=0;
+  isColor=false;
   constructor() { }
 
   ngOnInit() {
