@@ -1,12 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css'],
+  styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  constructor() {}
+  @Input() shape : string
+  @Output() callParent = new EventEmitter(); 
+  number=0;
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+  clickItemShowParentText(){
+    this.callParent.emit();
+  }
 }

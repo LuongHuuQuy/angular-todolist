@@ -1,0 +1,17 @@
+.custom-child {
+  background-color: #ffffff;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  border: 1px solid green;
+}
+.circle {
+  border-radius: 50%;
+}
+.square {
+  border: 1px solid green;
+  border-radius: 6px;
+}
