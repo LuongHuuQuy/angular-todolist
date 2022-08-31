@@ -1,31 +1,36 @@
-import { JSDocComment } from "@angular/compiler";
-import { Component, ViewChild, ElementRef } from "@angular/core";
-import { stringify } from "querystring";
+import { JSDocComment } from '@angular/compiler';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @ViewChild("myInput") myInput: ElementRef;
+  @ViewChild('myInput') myInput: ElementRef;
+  test: string = '';
 
-  title = "LuongHuuQuySandbox";
+  title = 'LuongHuuQuySandbox';
   isChangeColor = true;
-  inputString = "";
-  listTodo = ["Lhquy"];
+  inputString = '';
+  listTodo = ['Lhquy'];
   isCheck = -1;
+
+  // show item
+  showItem(item) {
+    this.test = item;
+  }
 
   // Chức năng: thêm công việc vào danh sách
   clickBtnAddItemTodoList() {
     console.log(this.myInput.nativeElement);
     this.myInput.nativeElement.focus();
     if (!this.inputString) {
-      alert("Bạn chưa nhập công việc !!! ");
+      alert('Bạn chưa nhập công việc !!! ');
       return;
     }
     this.listTodo.push(this.inputString);
-    this.inputString = "";
+    this.inputString = '';
   }
 
   // Xóa các phần tử trong TodoList
@@ -41,5 +46,9 @@ export class AppComponent {
   // thay ddoir mafu
   clickBtnChange() {
     this.isChangeColor = !this.isChangeColor;
+  }
+
+  handleEvent() {
+    console.log('event parent called!!');
   }
 }

@@ -1,8 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div [style.background-color]="isChangeColor==true ? '#ffffff': '#95afc0'">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div [style.background-color]="isChangeColor == true ? '#ffffff' : '#95afc0'">
+  <h1>Welcome to {{ title }}!</h1>
   <div class="container">
     <div class="header">
       <input tabindex="1" [(ngModel)]="inputString" #myInput type="text" />
@@ -16,21 +14,26 @@
     </div>
     <div class="content">
       <div *ngFor="let item of listTodo; let i = index" class="content-item">
-        <div (click)="clickBtnDone(i)" class="btn-done">{{i+1}}</div>
+        <div (click)="clickBtnDone(i)" class="btn-done">{{ i + 1 }}</div>
         <div
-          [style.text-decoration]="isCheck==i ? 'line-through': 'none'"
+          (click)="showItem(item)"
+          [style.text-decoration]="isCheck == i ? 'line-through' : 'none'"
           class="content-item-text"
         >
-          {{item}}
+          {{ item }}
         </div>
         <div (click)="clickBtnDeleteRow(i)" class="delete-row-item">X</div>
       </div>
     </div>
     <div
       class="change-bg-color"
-      [style.background-color]="isChangeColor==true ? '#ffffff': '#95afc0'"
+      [style.background-color]="isChangeColor == true ? '#ffffff' : '#95afc0'"
     >
-      <button (click)="clickBtnChange()">Đổi giao diện</button>
+      <!-- <button (click)="clickBtnChange()">Đổi giao diện</button> -->
     </div>
   </div>
 </div>
+<app-todo-list-detail
+  (eventParent)="handleEvent()"
+  [childMessage]="test"
+></app-todo-list-detail>
