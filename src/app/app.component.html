@@ -2,40 +2,11 @@
 <div [style.background-color]="isChangeColor == true ? '#ffffff' : '#95afc0'">
   <h1>Welcome to {{ title }}!</h1>
   <h1>{{ countTodolist }}</h1>
+  <h1>LocalStorage: {{ storage || 'Empty' }}</h1>
   <div class="container-top-parent">
     <app-parent1 [text]="'test 1'"></app-parent1>
     <app-parent2 [text]="'test 2'"></app-parent2>
   </div>
 
-  <div class="container">
-    <div class="header">
-      <input tabindex="1" [(ngModel)]="inputString" #myInput type="text" />
-      <button
-        tabindex="2"
-        (click)="clickBtnAddItemTodoList()"
-        class="button-add-item"
-      >
-        Add
-      </button>
-    </div>
-    <div class="content">
-      <div *ngFor="let item of listTodo; let i = index" class="content-item">
-        <div (click)="clickBtnDone(i)" class="btn-done">{{ i + 1 }}</div>
-        <div
-          (click)="showItem(item)"
-          [style.text-decoration]="isCheck == i ? 'line-through' : 'none'"
-          class="content-item-text"
-        >
-          {{ item }}
-        </div>
-        <div (click)="clickBtnDeleteRow(i)" class="delete-row-item">X</div>
-      </div>
-    </div>
-    <div
-      class="change-bg-color"
-      [style.background-color]="isChangeColor == true ? '#ffffff' : '#95afc0'"
-    >
-      <!-- <button (click)="clickBtnChange()">Đổi giao diện</button> -->
-    </div>
-  </div>
+  
 </div>

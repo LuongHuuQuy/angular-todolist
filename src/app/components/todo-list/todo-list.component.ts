@@ -1,12 +1,15 @@
-import { JSDocComment } from '@angular/compiler';
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-todo-list',
+  templateUrl: './todo-list.component.html',
+  styleUrls: ['./todo-list.component.scss']
 })
-export class AppComponent {
+export class TodoListComponent implements OnInit {
+
+  constructor() { }
+
+ 
   @ViewChild('myInput') myInput: ElementRef;
   test: string = '';
 

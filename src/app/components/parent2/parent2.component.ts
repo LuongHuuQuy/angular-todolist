@@ -16,7 +16,8 @@ export class Parent2Component implements OnInit {
   }
   ngOnInit() {}
   clickBtnChangeBgParent(){
-    this.isBackgroundParent = !this.isBackgroundParent;
+    // this.isBackgroundParent = !this.isBackgroundParent;
+    this.randomNumber.clickParentChangeColor();
   }
   clickBtnRandom(){
     this.randomNumber.randomNumber();

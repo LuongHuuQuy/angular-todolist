@@ -22,6 +22,6 @@ export class Parent1Component implements OnInit {
     this.bgChildComponent.clickParentChangeColor();
   }
   clickBtnRandom() {
-    this.randomNumber.randomNumber();
+    this.bgChildComponent.randomNumber();
   }
 }

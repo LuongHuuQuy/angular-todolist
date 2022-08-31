@@ -1,0 +1,31 @@
+<div class="container">
+<div class="header">
+  <input tabindex="1" [(ngModel)]="inputString" #myInput type="text" />
+  <button
+    tabindex="2"
+    (click)="clickBtnAddItemTodoList()"
+    class="button-add-item"
+  >
+    Add
+  </button>
+</div>
+<div class="content">
+  <div *ngFor="let item of listTodo; let i = index" class="content-item">
+    <div (click)="clickBtnDone(i)" class="btn-done">{{ i + 1 }}</div>
+    <div
+      (click)="showItem(item)"
+      [style.text-decoration]="item.done == true ? 'line-through' : 'none'"
+      class="content-item-text"
+    >
+      {{ item.name }}
+    </div>
+    <div (click)="clickBtnDeleteRow(i)" class="delete-row-item">X</div>
+  </div>
+</div>
+<div
+  class="change-bg-color"
+  [style.background-color]="isChangeColor == true ? '#ffffff' : '#95afc0'"
+>
+  <!-- <button (click)="clickBtnChange()">Đổi giao diện</button> -->
+</div>
+</div>
