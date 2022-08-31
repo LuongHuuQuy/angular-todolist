@@ -17,7 +17,8 @@ export class Parent1Component implements OnInit {
   }
   clickBtnChangeBgParent() {
     // this.isBackgroundParent = !this.isBackgroundParent;
-    // this.bgChild.nativeElement.
+    console.log(this.bgChild);
+    // this.bgChild.nativeElement.clickParentChangeColor();
   }
   clickBtnRandom() {}
 }

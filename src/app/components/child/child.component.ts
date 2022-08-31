@@ -17,4 +17,7 @@ export class ChildComponent implements OnInit {
   clickItemShowParentText(){
     this.callParent.emit();
   }
+  clickParentChangeColor(){
+    this.isColor = !this.isColor;
+  }
 }
