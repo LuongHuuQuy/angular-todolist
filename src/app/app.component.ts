@@ -48,7 +48,12 @@ export class AppComponent {
     this.isChangeColor = !this.isChangeColor;
   }
 
-  handleEvent() {
+  handleEvent(e) {
+    console.log(e);
     console.log('event parent called!!');
+  }
+  // gionhg computed - dung de tra ra mot gia tri tinh toan
+  get countTodolist() {
+    return this.listTodo.length;
   }
 }

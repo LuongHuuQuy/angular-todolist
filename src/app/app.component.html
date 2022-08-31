@@ -1,6 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div [style.background-color]="isChangeColor == true ? '#ffffff' : '#95afc0'">
   <h1>Welcome to {{ title }}!</h1>
+  <h1>{{ countTodolist }}</h1>
   <div class="container">
     <div class="header">
       <input tabindex="1" [(ngModel)]="inputString" #myInput type="text" />
@@ -34,6 +35,7 @@
   </div>
 </div>
 <app-todo-list-detail
-  (eventParent)="handleEvent()"
+  (eventParent)="handleEvent($event)"
   [childMessage]="test"
 ></app-todo-list-detail>
+<app-parent></app-parent>

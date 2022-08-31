@@ -2,13 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
-import {TodoListDetailComponent} from './components/todo-list-detail/todo-list-detail.component'
+import { ParentComponent } from './components/parent/parent.component';
 
 @NgModule({
-  declarations: [AppComponent, TodoListDetailComponent],
+  declarations: [AppComponent, ParentComponent],
   imports: [BrowserModule, FormsModule],
-  providers: [], 
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
