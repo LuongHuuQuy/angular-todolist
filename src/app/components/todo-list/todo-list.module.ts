@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import {TodoListComponent} from './todo-list.component'
+import { TodoListComponent } from './todo-list.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule, FormsModule],
   declarations: [TodoListComponent],
-  exports: [TodoListComponent]
+  exports: [TodoListComponent],
 })
-export class TodoListModule { }
+export class TodoListModule {}

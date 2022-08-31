@@ -1,10 +1,21 @@
+div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  h1{
+    color: green;
+  }
+}
 .container{
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 .header{
   display: flex;
@@ -122,3 +133,4 @@
   align-items: center;
   justify-content: space-evenly;
 }
+

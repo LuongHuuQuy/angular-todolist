@@ -8,7 +8,7 @@
     >
       Add
     </button>
-  </div> 
+  </div>
   <div class="content">
     <div *ngFor="let item of listTodo; let i = index" class="content-item">
       <div (click)="clickBtnDone(i)" class="btn-done">{{ i + 1 }}</div>
@@ -19,6 +19,7 @@
       >
         {{ item.name }}
       </div>
+      <!-- <input type="text" [(ngModel)]="item.name" /> -->
       <div (click)="clickBtnDeleteRow(i)" class="delete-row-item">X</div>
     </div>
   </div>

@@ -7,7 +7,7 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  // @ViewChild('myInput') myInput: ElementRef;
+  @ViewChild('myInput') myInput: ElementRef;
   test: string = '';
 
   title = 'LuongHuuQuySandbox';
@@ -17,6 +17,7 @@ export class AppComponent {
   isCheck = -1;
   storage = null;
   listStringStorage = '';
+  isShowTodoList = false;
 
   /**
    * Lifecycle
@@ -29,7 +30,9 @@ export class AppComponent {
   }
 
   ngOnDestroy() {}
-
+  clickBtnShowTodoList(){
+    this.isShowTodoList = !this.isShowTodoList;
+  }
   // show item
   showItem(item) {
     this.test = item;
@@ -37,8 +40,8 @@ export class AppComponent {
 
   // Chức năng: thêm công việc vào danh sách
   clickBtnAddItemTodoList() {
-    // console.log(this.myInput.nativeElement);
-    // this.myInput.nativeElement.focus();
+    console.log(this.myInput.nativeElement);
+    this.myInput.nativeElement.focus();
     if (!this.inputString) {
       alert('Bạn chưa nhập công việc !!! ');
       return;
