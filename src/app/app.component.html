@@ -7,6 +7,9 @@
     <app-parent1 [text]="'test 1'"></app-parent1>
     <app-parent2 [text]="'test 2'"></app-parent2>
   </div>
-  <button (click)="clickBtnShowTodoList()" class="show-todo-list">Hiển thị danh sách công việc</button>
-  <app-todo-list *ngIf ="isShowTodoList" ></app-todo-list>
+  <button (click)="clickBtnShowTodoList()" class="show-todo-list">
+    Hiển thị danh sách công việc
+  </button>
+  <app-todo-list *ngIf="isShowTodoList"></app-todo-list>
+  <h1>{{ 'ntdung5' | filter }}</h1>
 </div>
