@@ -7,6 +7,7 @@ import { Parent1Module } from './components/parent1/parent1.module';
 import { Parent2Module } from './components/parent2/parent2.module';
 import { TodoListModule } from './components/todo-list/todo-list.module';
 import { FilterModule } from '../pipes/filter.module';
+import { FormModule } from './components/form/form.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { FilterModule } from '../pipes/filter.module';
     Parent2Module,
     TodoListModule,
     FilterModule,
+    FormModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
