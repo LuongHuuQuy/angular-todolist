@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FilterPipe } from './filter.pipe';
 
 @NgModule({
-  imports: [CommonModule, FilterPipe],
+  imports: [CommonModule],
   declarations: [FilterPipe],
+  exports: [FilterPipe],
 })
 export class FilterModule {}
